@@ -1,0 +1,741 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    height: 180vh;
+    overflow-x: hidden;
+}
+#header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .logo{
+    color: #094b65;
+    font-weight: 650;
+    font-size:2rem;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive
+}
+#header ul{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#header ul li{
+    list-style: none;
+    margin-left: 20px;
+    font-size:1.3rem;
+    font-weight: 500;
+    font-family: 'Rancho', cursive;
+    
+}
+#header ul li a
+{
+    text-decoration: none;
+    padding:6px 15px;
+    color:#0f5570;
+}
+#header ul li 
+a:hover,
+active{
+    background-color: #aee4fb;
+    border-radius: 20px;
+}
+
+#section{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section::before{
+    position: absolute;
+    bottom: 0;
+    top:0;
+    width: 100%;
+    height: 100px;
+    background:linear-gradient(to top,rgb(2, 36, 65),transparent);
+}
+#section #text{
+    position: absolute;
+    color:#094b65;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 0.57em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-30%);
+}
+#section img{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+#section #text span
+{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 550; 
+}
+#section #btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: rgb(239, 241, 216);
+    color: #010b0f;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(150px);
+}
+
+/*
+#image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style:preserve-3d;
+    width: 100%;
+}
+#image .card
+{
+
+    position: relative;
+    width: 270px;
+    height: 200px;
+    margin:10px;
+    transform-style:preserve-3d;
+    perspective: 1000px;
+}
+#image .card .box
+{
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    transform-style:preserve-3d;
+    transition: 2s ease;
+}
+#image .card:hover .box
+{
+     transform: rotateY(180deg);
+}
+#image .card .box .imagebox
+{
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+
+}
+#image .card .box .imagebox img{
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#image .card .box .context
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#065b70a6;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style:preserve-3d;
+   transform: rotateY(180deg);
+}
+#image .card .box .context div
+{
+    transform-style :preserve-3d;
+    padding: 15px;
+    text-align: center;
+    background: rgba(211, 210, 210, 0.801);
+    transform: translateZ(90px);
+    overflow-x: hidden;
+}
+#image .card .box .context div p
+{
+    color:#070707c5;
+    font-size: 14px;
+    font-weight: 690;
+    font-family: 'Dancing Script', cursive;
+}
+#image .card .box .context .bt
+{
+    padding: 6px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(253, 212, 212, 0.876);
+    font-family: 'Dancing Script', cursive;
+}*/
+
+#Packages
+{
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+ }
+   #Packages .cardbox
+   {
+       position: relative;
+       width: 370px;
+       height: 300px;
+       margin:10px;
+       margin-top:50px;
+   }
+   #Packages .cardbox .imgboxs
+   {
+       position: absolute;
+       top:0;
+       bottom:0;
+       width: 100%;
+       height: 100%;
+   }
+   .cardbox .imgboxs img
+   {
+       position: absolute;
+       top:0;
+       bottom:0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       transition: 0.2s;
+   }
+   .cardbox:hover .imgboxs img
+   {
+      opacity: 0;
+   } 
+
+   .cardbox .context
+   {
+       position: absolute;
+       bottom: 15px;
+       left:20%;
+       background-color: #ffffffa1;
+       width:80%;
+       height: 70px;
+       transition: 0.5s;
+       overflow: hidden;
+   }
+   .cardbox:hover .context
+   {
+       width: 100%;
+       height: 100%;
+       bottom:0px;
+       left:0px;
+       margin-top:10px;
+       background-color: rgba(174, 174, 179, 0.438);
+   }
+   .cardbox .context h3
+   {
+        
+       text-align: center;
+       font-size: 18px;
+       margin-top: 20px;
+       font-family:'Courier New', Courier, monospace;
+       letter-spacing: 1px;
+       color:#0b4f69;
+   }
+   /* ----------------------------------Travel Css Part--------------------------------------*/
+    #Travel
+    {
+       
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 30px;
+        
+   }
+   #Travel .photo
+   {
+        position: relative;
+        width: 300px;
+        height: 210px;
+        margin:10px;
+        margin-top:5px; 
+      
+   }
+   #Travel .photo .imbox
+   {
+         position: relative;
+         width: 250px;
+         height: 200px;
+         margin:5px;
+         margin-top:20px;
+         margin-bottom: 10px;
+         box-shadow: 5px 5px 20px #04425a; 
+   }
+   #Travel .photo .imbox img
+    {
+        position: absolute;
+        top:0;
+        bottom:0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+/*------------------------------------------------- Title And It Css Part----------------------------------*/
+ .title
+ {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+ }
+.title h2
+{
+    position: relative;
+    font-weight: 550;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    color:#0f5570;
+    font-family: 'Caveat', cursive;
+}
+.title h2::before
+{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left:50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: #0f5570;
+}
+#about
+{
+    margin:50px auto;
+    padding: 10px;
+}
+.picbox img
+{
+   float: right;
+   width: 470px;
+   height: 470px;
+   padding: 0 15px 0;
+   transform: translatey(-10%);
+   align-items: center;
+   
+}
+
+.textbox{
+    text-align: justify;
+    
+}
+.textbox h3
+{
+    font-size: 1.3em;
+    font-family: 'Caveat', cursive;
+    color: #094b65;
+    font-weight: 560;
+    letter-spacing: 2px;
+    text-align: center;
+  
+    
+}
+.textbox p,li
+{
+
+    padding-top:10px ;
+    text-align: center;
+    list-style-type:disc;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #494949f1;
+    font-weight: 540;
+
+    
+}
+/* ------------------------------------------------guide Css Part-------------------------- */
+#Guide
+  {
+    background-image: url('/images/pic2.jpg') ;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    
+  }
+  
+  #Guide .team
+  {
+    position: relative;
+    width: 300px;
+    height: 240px;
+    margin:10px;
+    margin-top:100px;
+   }
+
+ .team .team_member
+  {
+     background-color: #d8dfe269;
+     text-align:center;
+     align-items: center;
+     font-family: 'Allura', 'cursive';
+     font-size:18px;
+     padding:2px;
+     font-style: italic;
+     border-radius: 10px;
+     box-shadow: 0px 5px 15px rgb(15, 15, 15); 
+   }
+
+   .team .team_member .teamimg
+   {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+   }
+    .team .team_member .teamimg img
+    {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+      }
+
+
+/*#contact
+{
+    display: grid;
+    grid-template-columns: repeat(3,0.3fr);
+    margin-top: 5%;
+    grid-gap: 10px;
+    align-items: center;
+    padding-left: 6rem;
+    
+}
+.imgbox img{
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    border:2px solid rgb(1, 12, 1);
+    box-shadow: 5px 10px 15px rgb(4, 40, 54);
+}
+#contact .cards
+{
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid rgba(112, 109, 109, 0.966);
+    box-shadow: 5px 10px 15px rgb(4, 40, 54);
+    background: rgb(214,233,251);
+    background: linear-gradient(228deg, rgba(214,233,251,1) 23%, rgb(226, 248, 250) 46%, rgba(115, 249, 252, 0.548) 70%);
+    width: 270px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+.details{
+
+    font-size: 15px;
+}
+.details i{
+    padding-top: 5px;
+    color: rgba(0, 0, 0, 0.794);
+}*/
+#service
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:20px 0px;
+}
+#service .car
+{
+    position: relative;
+    width: 310px;
+    height: 320px;
+    margin:17px;
+    box-shadow: 0 5px 15px rgb(128, 128, 128);
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+#service .car .details
+{
+    position:absolute;
+    bottom:-150px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:10;
+    flex-direction: column;
+    backdrop-filter: blur(35px);
+    box-shadow: 0 -10px 10px #a2adad8e;
+    border: 2px solid #5b66668e;
+}
+#service .car:hover .details
+{
+    bottom: 0px;
+}
+#service .car:hover .details p
+{
+
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1.5px;
+    padding: 5px 5px;
+}
+#service .car:hover .details h4
+{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2.5px;
+    padding: 5px 2px;
+    color:#094b65
+    
+}
+/*-------------------------------------------------------------------------------------------------------*/
+.picboxs {
+    margin-top: 20px;
+}
+.contentboxs{
+    margin-top: 40px;
+}
+.picboxs img
+{
+   float: right;
+   width: 560px;
+   height: 450px;
+   padding: 0 15px 0;
+   align-items: center;
+   margin-right: 50px;
+   
+}
+/*----------------------------------------------------------------------------------------------*/
+#Idea{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+#Idea .cards
+{
+     position: relative;
+     width:300px;
+     height:310px;
+     margin:25px;
+     margin-top:10px;
+     margin-bottom: 50px;
+    /* background: rgb(207, 171, 171);*/
+}
+.imgcont
+{
+    position: relative;
+    width: 350px;
+    height:200px;
+}
+ .imgcont img{
+   
+    border-radius: 50%;
+    box-shadow: 15px 0px 15px #0b4f69;  
+    margin-left: 20px ;   
+ }
+ .textcont{
+     margin-top: 20px;
+     text-align: center;
+ }
+ .textcont h2
+ {
+     color: #0b4f69;
+     font-family: 'Rancho', cursive;
+     font-size: 20px;
+ }
+ .textcont p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    color: #080808;
+ }
+
+#footer
+{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background:url('/image/cv.png');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-left: 60px;
+}
+#footer.fotdet
+{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.fotdet .texts
+{
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
+    color:#04425a;
+    letter-spacing: 2px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.fotdet .testd
+{
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+input[type="email"]
+{
+    width: 200px;
+    height: 40px;
+    margin-top:10px;
+    text-align: center;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    background-color:rgba(243, 241, 241, 0.52) ;
+    color:#04425a;
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    background-color: rgba(255, 241, 47, 0.514);
+}
+.buts
+{
+    width: 100px;
+    height: 35px;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    border:none;
+    outline:none;
+    color:#111010;
+    background-color: rgba(154, 250, 11, 0.548);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.buts:hover
+{
+    background-color: rgba(243, 243, 150, 0.548);
+    color:red
+}
+.social #socialtext
+{
+    margin-top:10%;
+    font-family: 'EB Garamond', serif;
+    font-style:25px;
+    color:rgb(10, 10, 10);
+    font-style: italic;
+}
+.social .soci
+{
+  display: flex;
+   justify-content: space-evenly;
+}
+.soci i
+{
+    color:rgb(7, 7, 7);
+    font-size:18px;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+
+}
+.soci i:hover
+{
+    color: rgb(35, 246, 7);
+    background-color: rgb(243, 245, 165);
+}
+@media(max-width:892px){
+    #Travel{
+        height: 140vh;
+   }
+    .picboxs img
+    {
+   float: right;
+   width: 400px;
+   height: 330px;
+   padding: 0 15px 0;
+   align-items: center;
+   margin-right: 50px;
+   
+    }
+    .picbox img
+    {
+   float: right;
+   width: 460px;
+   height: 470px;
+   padding: 0 15px 0;
+   transform: translatey(-10%);
+   align-items: center;
+   
+  }
+  #footer{
+    margin-left: 10px;
+  }
+}
+
+@media(max-width:639px){
+    #Travel{
+        height: 300vh;
+   }
+
+}
